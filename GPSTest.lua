@@ -2,11 +2,11 @@ myCords = {0,0,0}
 
 toCords = {0,0,0}
 
-myCords = gps.locate(1)
+local x,y,z = gps.locate(1)
+myCords[1] = x
+myCords[2] = y
+myCords[3] = z
 
-for i = 1,4,1   do 
-    print(myCords[i])
-end
 
 rednet.open("left")
 
