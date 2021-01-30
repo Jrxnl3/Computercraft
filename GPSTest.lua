@@ -15,11 +15,17 @@ rednet.open("left")
         print("Received "..toX)
     end
 
+    senderId,message,protocol = rednet.receive("QuarryCords")
+
+
     if message:startswith("MyY") then
         toY = message
         print("Received "..toY)
 
     end
+
+    senderId,message,protocol = rednet.receive("QuarryCords")
+
 
     if message:startswith("MyZ") then
         toZ = message
@@ -27,9 +33,11 @@ rednet.open("left")
 
     end
 
+    senderId,message,protocol = rednet.receive("QuarryCords")
+
     if message == "start" then
         msg = 1
         print("Received "..msg)
 
     end
-    print("looped")
+    
