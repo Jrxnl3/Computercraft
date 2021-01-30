@@ -1,10 +1,12 @@
-string.startswith = function(self, str) 
-    return self:find('^' .. str) ~= nil
+myCords = {0,0,0}
+
+toCords = {0,0,0}
+
+myCords = gps.locate(1)
+
+for i = 1,4,1   do 
+    print(myCords[i])
 end
-
-msg = 0
-
-toCords = {"toX","toY","toZ"}
 
 rednet.open("left")
 
