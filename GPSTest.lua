@@ -5,6 +5,8 @@ end
 msg = 0
 local toX,toY,toZ
 
+rednet.open("left")
+
 while msg <= 1 do
 
     senderId,message,protocol = rednet.receive("QuarryCords")
@@ -31,7 +33,7 @@ while msg <= 1 do
         print("Received " + msg)
 
     end
-
+    print("looped")
 end
 
 
