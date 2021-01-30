@@ -7,7 +7,7 @@ local toX,toY,toZ
 
 while msg <= 1 do
 
-    senderId,message,protocol = rednet.received("QuarryCords")
+    senderId,message,protocol = rednet.receive("QuarryCords")
     
     if message:startswith("MyX") then
         toX = message
