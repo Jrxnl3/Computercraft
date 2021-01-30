@@ -7,30 +7,29 @@ local toX,toY,toZ
 
 rednet.open("left")
 
-while msg ~= 1 do
 
     senderId,message,protocol = rednet.receive("QuarryCords")
     
     if message:startswith("MyX") then
         toX = message
-        print("Received " + toX)
+        print("Received "..toX)
     end
 
     if message:startswith("MyY") then
         toY = message
-        print("Received " + toY)
+        print("Received "..toY)
 
     end
 
     if message:startswith("MyZ") then
         toZ = message
-        print("Received " + toZ)
+        print("Received "..toZ)
 
     end
 
     if message == "start" then
         msg = 1
-        print("Received " + msg)
+        print("Received "..msg)
 
     end
     print("looped")
