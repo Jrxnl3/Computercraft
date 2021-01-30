@@ -33,8 +33,3 @@ rednet.open("left")
 
     end
     print("looped")
-end
-
-
-
-
