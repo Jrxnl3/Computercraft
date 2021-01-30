@@ -3,35 +3,20 @@ string.startswith = function(self, str)
 end
 
 msg = 0
-local toX,toY,toZ
+
+toCords = {"toX","toY","toZ"}
 
 rednet.open("left")
 
 
-    senderId,message,protocol = rednet.receive("QuarryCords")
-    
-    if message:startswith("MyX") then
-        toX = message
-        print("Received "..toX)
+    for i = 1,4,1   do 
+
+        senderId,message,protocol = rednet.receive("QuarryCords")
+
+        toCords[i] = message
+        print(toCords[i])
     end
 
-    senderId,message,protocol = rednet.receive("QuarryCords")
-
-
-    if message:startswith("MyY") then
-        toY = message
-        print("Received "..toY)
-
-    end
-
-    senderId,message,protocol = rednet.receive("QuarryCords")
-
-
-    if message:startswith("MyZ") then
-        toZ = message
-        print("Received "..toZ)
-
-    end
 
     senderId,message,protocol = rednet.receive("QuarryCords")
 
@@ -40,5 +25,5 @@ rednet.open("left")
         print("Received "..msg)
 
     end
-    
+
 
