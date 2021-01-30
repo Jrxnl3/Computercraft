@@ -7,7 +7,7 @@ local toX,toY,toZ
 
 rednet.open("left")
 
-while msg <= 1 do
+while msg ~= 1 do
 
     senderId,message,protocol = rednet.receive("QuarryCords")
     
