@@ -1,0 +1,1 @@
+shell.run("quarry 47 1 20 0")
